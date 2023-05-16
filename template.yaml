@@ -1,0 +1,117 @@
+organization: OMRON SINIC X
+twitter: "@omron_sinicx"
+title: "Learning Food Picking without Food: Fracture Anticipation by Breaking Reusable Fragile Objects"
+conference: ICRA2023
+resources:
+  paper: https://www.researchgate.net/publication/370778136_Learning_Food_Picking_without_Food_Fracture_Anticipation_by_Breaking_Reusable_Fragile_Objects
+  # code: https://github.com/omron-sinicx/multipolar
+  video: https://www.youtube.com/embed/9cW1KVdGHmY
+  # blog: https://medium.com/sinicx/multipolar-multi-source-policy-aggregation-for-transfer-reinforcement-learning-between-diverse-bc42a152b0f5
+description: null
+image: https://omron-sinicx.github.io/mgrasp/assets/mgrasp.png
+url: https://omron-sinicx.github.io/mgrasp
+# speakerdeck: b7a0614c24014dcbbb121fbb9ed234cd
+authors:
+  - name: Rinto Yagawa
+    affiliation: [1]
+    position: Student
+    url: null
+  - name: Reina Ishikawa
+    affiliation: [1]
+    position: Student
+    url: null
+  - name: Masashi Hamaya
+    affiliation: [2]
+    position: Senior Researcher
+    url: https://sites.google.com/view/masashihamaya/home
+  - name: Kazutoshi Tanaka
+    affiliation: [2]
+    url: https://kazutoshi-tanaka.github.io/pages/index_eng.html
+    position: Senior Researcher 
+  - name: Atsushi Hashimoto
+    affiliation: [2]
+    url: null
+    position: Senior Researcher 
+  - name: Hideo Saito
+    affiliation: [1]
+    url: null
+    position: Professor
+contact_ids: [2] #=> 2nd author
+affiliations:
+  - Keio University
+  - OMRON SINIC X Corporation
+# meta:
+#   - "* work done as an intern at OMRON SINIC X."
+bibtex: >
+  @inproceedings{yagawa2023learning,
+    title={Learning Food Picking without Food: Fracture Anticipation by Breaking Reusable Fragile Objects},
+    author={Yagawa, Rinto and Ishikawa, Reina and Hamaya, Masashi and Tanaka, Kazutoshi and Hashimoto, Atsushi and Saito, Hideo},
+    booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+    year={2023}
+  }
+
+overview: >
+  Food picking is trivial for humans but not for robots, as foods are fragile. 
+  Presetting foods' physical properties does not help robots much due to the objects' inter- and intra- category diversity. 
+  In a previous study, we demonstrated that learning food properties is essential for fracture-free picking. 
+  We leveraged the breaking experiences of food objects to obtain food properties. 
+  During the training, a robot equipped with a universal two-finger gripper and tactile sensors broke the objects and measured the tactile signals, which describe when the fractures occur. 
+  We then trained a fracture anticipation network, which anticipates the timing of the object's future fracture. 
+  Fracture anticipation enables fracture-free picking by stopping the gripper motion immediately before the object breaks. 
+  The previous method clarified that we could achieve food picking through object-breaking experiences; however, the method assumes a category-specific model and requires breaking many food objects in the category to train the model. 
+  For practical use, the network should be able to anticipate the fracture of unseen food objects. 
+  Furthermore, the amount of food consumption required for training is economically and environmentally undesirable.
+  In this paper, we propose a method for making a robot grasp multiple unseen food categories without using a category-specific model trained by consuming a considerable amount of food in that category.
+  The key idea is to leverage the object-breaking experiences of several reusable fragile objects instead of consuming real foods while making the picking ability
+  object-invariant with domain generalization (DG). 
+  In real-robot experiments, we trained a model with reusable objects (toy blocks, ping-pong balls, and jellies), selected based on the three common fracture types (crack, rupture, and crush). 
+  We then tested the model with four real food objects (tofu, bananas, potato chips, and tomatoes). 
+  The results showed that the proposed combination of reusable objects' breaking experiences and DG is effective for the food-picking task.
+
+method: null
+  # - title: Cable path
+  #   image: drawing.png
+  #   text: > 
+  #     The motors located at the base link drive the joints via cables. 
+  #     This drawing shows the bottom side cables.
+  #     The arm does not have any pretension mechanism between the motors and the termination location in moving links. 
+  # - title: Cable-pretension/termination mechanism
+  #   image: fix.png
+  #   text: > 
+  #     This mechanism compact adds pretension to a cable by reeling this and fixes the cable to a link by inserting a pin.
+  # - title: Covering parts to cable-coming-off
+  #   image: pulley.png
+  #   text: > 
+  #     Joint parts cover pulleys to avoid cable-coming-off. 
+  #     If a cable is slacked once, this cable can go back to a pulley by being covered.
+  # - title: subsection2
+  #   image: null
+  #   text: >
+  #     subsection body 2
+  # - title: null
+  #   image: method.png
+  #   text: >
+  #     subsection body 2
+
+results: null
+# results:
+#   - This is a result description text.
+#   - This is a result1 description text.
+#   - This is a result2 description text.
+#   - This is a result3 description text.
+
+demo: null
+  # - mp4: twistsnake15s.mp4
+  #   text: null
+  #   scale: 100%
+  # - mp4: result1.mp4
+  #   text: demo text2 demo text2 demo text2
+  #   scale: 100%
+  # - mp4: result1.mp4
+  #   text: demo text3 demo text3 demo text3
+  #   scale: 80%
+
+# poster:
+#   - title: Poster
+#     image: poster.png
+#     text: null
